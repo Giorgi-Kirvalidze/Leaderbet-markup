@@ -1,0 +1,79 @@
+.gameStats {
+    background-color:#252630;
+    grid-column: center-start/col-end 8;
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+    background-color:$back-color;
+    list-style: none;
+    &__item{
+        display:inline-block;
+        margin-right:3rem;
+    }
+    &__link:link,
+    &__link:visited {
+        font-size: 1.3rem;
+        color:#f7f7f7;
+        text-decoration: none;
+        list-style:none;
+        font-family: "ALK Rounded Mtav Med", sans-serif;
+        text-transform: uppercase;
+        padding:1.5rem;
+        display: block;
+        transition: all .2s;
+        outline: none;
+        letter-spacing: 1px;;
+    }
+    &__link:hover,
+    &__link:visited{
+        background-color:rgba(#fff,.05);
+        transform:translateY(.2rem);
+        border-bottom:5px solid #FF00B2; 
+    }
+}
+.nav__link--active:visited {
+    color:yellow;
+}
+.gameTable {
+    font-size: 1.4rem;
+    width:100%;
+    border-spacing:0;
+    border-collapse: collapse;
+    line-height: 5rem;
+th{
+    text-align: center;
+    background-color: #2B2E3A;
+    color:#B5B7BE;
+  }
+tbody{
+    tr{ 
+        td{
+            span{
+                background-color: #5F39B7;
+                padding:.5rem 1.5rem;
+                border-radius:2rem;
+                color:#FFD919;
+            }
+                border: none;
+                line-height: 4.5rem;
+                padding: 0;
+                text-align: center;
+            svg{
+                height:1.5rem;
+                width:2rem;
+            }
+        }
+    }
+  }
+}
+tr:nth-child(even) {
+    background-color: #272936;
+  }
+tr:nth-child(odd) {
+    background-color: #252630;
+}
+.gray{
+    background-color: #323341;
+}
+

@@ -1,0 +1,41 @@
+.gameMode {
+    grid-column:center-start/col-end 8;
+}
+.gameNav {
+    background-color: #3D2F60;
+    list-style: none;
+    display: grid;
+    border-radius: .5rem;
+    &__link:link,
+    &__link:visited {
+        font-size: 1.3rem;
+        color:#f7f7f7;
+        text-decoration: none;
+        list-style:none;
+        font-family: "ALK Rounded Mtav Med", sans-serif;
+        text-transform: uppercase;
+        padding:1.5rem;
+        display: block;
+        transition: all .2s;
+        outline: none;
+        letter-spacing: 1px;;
+    }
+    &__link:hover,
+    &__link:visited{
+        background-color:rgba(#fff,.05);
+        transform:translateY(.2rem);
+        border-bottom:5px solid #FF00B2;
+    }
+    svg {
+        align-self:center;
+        justify-self:end;
+        @include smallIcons;
+        grid-column: 10/11;  
+    }
+    &__onlines{
+        align-self:center;
+        grid-column:col-start 10/span 1;
+        padding-left:1.5rem;
+        font-size:1.2rem;
+    }
+}

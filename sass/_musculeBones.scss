@@ -1,0 +1,51 @@
+.musculBones {
+    grid-column:center-start/col-end 8;
+    grid-gap:1rem;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+}
+.table{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color:#5F39B7;
+    font-size:1.4rem;
+    border-radius:.5rem;
+    &__maxPlayers{
+        grid-column:1/span 2;
+        padding:1rem;
+        &::after {
+            content: "";
+            height:3px;
+            display: block;
+            background-color:#C5D8F9;
+            width:30%;
+        }
+    }
+    &__maxWin{
+        grid-column:1/-1;
+        grid-row:2/3;
+        &--currency{
+         font-size: 1.5rem;  
+        }
+        &--number{
+            font-size: 4.5rem;
+            margin-left:7.5rem;
+        }
+        &--subText{
+            font-size:1.2rem;
+            display:block;
+            text-align:center;
+            margin-top:-1rem;
+        }
+    }
+    &__icon{
+        display:inline-flex;
+        grid-row: 3/4;
+        grid-column:1/3;
+        justify-self: center; 
+        svg{
+            @include smallIcons;
+            margin-left:2rem;
+        }
+    }  
+}

@@ -1,0 +1,67 @@
+.main{
+    display:grid;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(11, [col-start] minmax(min-content, 11.4rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-row:1/2 ;
+    grid-column:full-start/full-end;
+    align-items:center;
+    justify-items: start;
+    background-color: #202126;
+    &__logo{
+        grid-column:2/3;
+        &--svg{
+            height: 8rem;
+            width: 5rem;
+        }
+    }
+    &__buttons{
+        display:grid;
+        grid-template-columns: 10rem repeat(4,1fr);
+        grid-column:11/13;
+        grid-row:1/2;
+        row-gap:1rem;
+        justify-self: end;
+    }
+    &__jackpot1{
+        grid-column:4/6;
+        &--text{
+        color:#98AAC2;
+        margin-top:.5rem;
+        letter-spacing: .2rem;
+        }
+    }
+        &__jackpot2{
+        grid-column:7/9;
+        &--text{
+        color:#98AAC2;
+        margin-top:.5rem;
+        letter-spacing: .2rem;
+        }
+    }
+    &__jackpotList{      
+        list-style: none;
+        display:flex;
+        grid-gap:.5rem;
+        &--item-big{
+            color:#D6D9D9;
+            font-size: 1.5rem;
+            padding:.2rem .8rem;
+            background-color: #505081; 
+        }
+        &--item-dot{
+            align-self:end;
+            justify-self: center;
+            font-size:1.3rem;
+        }
+        &--item-small{
+            color:#9AAACF;
+            font-size: 1.2rem;
+            justify-self: center;
+            align-self: end;
+            padding:.2rem .5rem;
+            background-color: #40406D;
+        }
+        &--item-dot{
+            color:#505081;
+        }
+    }
+}  

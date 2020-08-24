@@ -1,0 +1,57 @@
+$back-color:#202126;
+@mixin absCenter {
+    position: absolute;
+    top:50%;
+    left:50%;  
+}
+@mixin smallIcons {
+    height:2rem;
+    width:1.8rem;
+}
+@mixin popupBack {
+    height:100vh;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    opacity:0;
+    visibility: hidden;
+    transition: all .3s;
+}
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body {
+    font-family: "ALK Rounded Mtav Med", sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #FFFFFF;  
+}
+.container {
+    background-color:$back-color;
+    display: grid;
+    grid-gap:1.5rem; 
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 11.4rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-template-rows:10rem 5rem minmax(60rem,1fr) minmax(min-content,max-content) ;
+    padding-bottom:3rem;
+}
+.col-3{
+    grid-row:2/-1;
+    grid-column:col-end 8/center-end;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows: 32rem ;
+    row-gap:1rem;
+}
+
+::selection{
+    background-color: violet;
+}
